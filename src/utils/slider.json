@@ -1,38 +1,44 @@
 [
   {
-    "name": "Aliva Priva Jardin",
-    "price": "47,043",
-    "detail": "Jakarta Garden City Street, Cakung. Pulo Gadung, Jakarta Timur, DKI Jakarta",
-    "image": "./r1.png"
+    "name": "Victoria Garden City",
+    "price": "200,000",
+    "detail": "Road 5, phase2, victoria garden. lekki lagos Nigeria",
+    "image": "./r1.png",
+    "currency": "$"
   },
   {
-    "name": "Asatti Garden City",
-    "price": "66,353",
-    "detail": "Pahlawan Street XVII No.215, Cinangka, Sawangan, Depok, Jawa Barat",
-    "image": "./r2.png"
+    "name": "Banana Island",
+    "price": "500,000",
+    "detail": "Road 5, phase2, victoria garden. Banana Island lagos Nigeria",
+    "image": "./r2.png",
+    "currency":"$"
   },
   {
-    "name": "Citralan Puri Serang",
-    "price": "35,853",
-    "detail": "Ruko Puri Indah Residence Block A7, Lingkar Street, Ciracas, Serang, Banten",
-    "image": "./r3.png"
+    "name": "Lekki Phase1",
+    "price": "$750,000",
+    "detail": "44 Ridge Avenue Manasquan, New Jersey, 08736 United States",
+    "image": "./r3.png",
+    "currency": "£"
   },
   {
-    "name": "Aliva Priva Jardin",
-    "price": "47,043",
-    "detail": "Jakarta Garden City Street, Cakung. Pulo Gadung, Jakarta Timur, DKI Jakarta",
-    "image": "./r1.png"
+    "name": "Lekki gardens",
+    "price": "100,000",
+    "detail": "Road 5, phase2, victoria garden. lekki lagos Nigeria",
+    "image": "./r1.png",
+    "currency":"€"
   },
   {
-    "name": "Asatti Garden City",
-    "price": "66,353",
-    "detail": "Pahlawan Street XVII No.215, Cinangka, Sawangan, Depok, Jawa Barat",
-    "image": "./r2.png"
+    "name": "Lekki Mayfair garden",
+    "price": "100,000",
+    "detail": "Road 5, phase2, victoria garden. lekki lagos Nigeria",
+    "image": "./r2.png",
+    "currency":"£"
   },
   {
-    "name": "Citralan Puri Serang",
-    "price": "35,853",
-    "detail": "Ruko Puri Indah Residence Block A7, Lingkar Street, Ciracas, Serang, Banten",
-    "image": "./r3.png"
+    "name": "Banana Island",
+    "price": "300,000",
+    "detail": "Road 5, phase2, victoria garden. Banana Island lagos Nigeria",
+    "image": "./r3.png",
+    "currency": "£"
   }
 ]
