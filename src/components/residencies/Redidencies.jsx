@@ -1,9 +1,10 @@
 import React from 'react'
-import {Swiper, SwiperSlide, useSwiper} from "swiper/react"
-import "swiper/css"
+import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
+import 'swiper/css';
 import "./Residencies.css"
-import swiperData from "../../utils/slider.json"
+import data from "../../utils/slider.json"
 const Redidencies = () => {
+
   
   return (
     <section className="r-wrapper">
@@ -12,21 +13,25 @@ const Redidencies = () => {
         <span className="orangeText">Best Options</span>
         <span className="primaryText">Popular Residencies</span>
         </div>
-        <Swiper>
-          {swiperData.map((data, i) =>(
+      
+        <Swiper
+        spaceBetween={50}
+        >
+          {data.map((card, i) =>(
             <SwiperSlide key={i}>
               <div className="flexColStart r-card">
-                <img src={data.image} alt="home" />
-                <span style={{color: "gold"}}>{data.currency}</span>
+                <img src={card.image} alt="home" />
                 <span className="secondaryText r-price">
-                  {data.price}
+                <span style={{color: "gold"}}>{card.currency}</span>
+                 <span>{card.price}</span> 
                 </span>
-                <span className="primaryText">{data.name}</span>
-                <span className="secondaryText">{data.detail}</span>
+                <span className="primaryText">{card.name}</span>
+                <span className="secondaryText">{card.detail}</span>
               </div>
             </SwiperSlide>
           ))}
         </Swiper>
+          
       </div>
     </section>
   )
