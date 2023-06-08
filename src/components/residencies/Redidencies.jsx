@@ -1,5 +1,5 @@
 import React from "react";
-import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
+import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "./Residencies.css";
 import data from "../../utils/slider.json";
@@ -12,7 +12,7 @@ const Redidencies = () => {
           <span className="primaryText">Popular Residencies</span>
         </div>
 
-        <Swiper spaceBetween={50}>
+        <Swiper>
           {data.map((card, i) => (
             <SwiperSlide key={i}>
               <div className="flexColStart r-card">
