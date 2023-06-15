@@ -9,3 +9,47 @@
 .v-right {
   gap: 0.5rem;
 }
+
+.accordion {
+  margin-top: 2rem;
+  border: none;
+}
+
+.accordionItem {
+  background: white;
+  border: 0.8px sold rgba(128, 128, 128, 0.143);
+  border-radius: 9px;
+  overflow: hidden;
+  margin-bottom: 15px;
+  -webkit-box-shadow: 0 0 5px 2px #eeeeff;
+  -moz-box-shadow: 0 0 5px 2px #eeeeff;
+  box-shadow: 0 0 5px 2px #eeeeff;
+}
+
+.accordionItem.expanded {
+  box-shadow: var(--shadow);
+  border-radius: 9px;
+}
+
+.accordionButton {
+  background: white;
+  padding: 1rem;
+  width: 100%;
+  justify-content: space-between;
+  cursor: pointer;
+
+}
+
+.icon {
+  padding: 10px;
+  background: #eeeeff;
+  border-radius: 10px;
+}
+
+.icon svg {
+  fill: var(--blue);
+}
+
+.accordionButton .primaryText {
+  font-size: 1.4rem;
+}
