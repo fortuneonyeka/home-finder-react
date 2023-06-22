@@ -6,6 +6,7 @@ import Redidencies from "./components/residencies/Redidencies";
 import Value from "./components/values/Value";
 import Contacts from "./components/contacts/Contacts";
 import GetStarted from "./components/getStarted/GetStarted";
+import Footer from "./components/footer/Footer";
 
 function App() {
   return (
@@ -20,6 +21,8 @@ function App() {
         <Value />
         <Contacts />
         <GetStarted />
+
+        <Footer />
     </div>
   );
 }
