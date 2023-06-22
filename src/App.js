@@ -5,6 +5,7 @@ import Companies from "./components/companies/Companies";
 import Redidencies from "./components/residencies/Redidencies";
 import Value from "./components/values/Value";
 import Contacts from "./components/contacts/Contacts";
+import GetStarted from "./components/getStarted/GetStarted";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Redidencies />
         <Value />
         <Contacts />
+        <GetStarted />
     </div>
   );
 }
