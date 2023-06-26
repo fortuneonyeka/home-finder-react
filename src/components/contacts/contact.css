@@ -2,7 +2,7 @@
   justify-content: space-between;
 }
 
-.c-container>div {
+.c-container > div {
   flex: 1;
 }
 
@@ -21,10 +21,6 @@
 
 .contactModes .row {
   gap: 1.5rem;
-}
-
-.contactModes .row {
-  flex-direction: row;
 }
 
 .mode {
@@ -55,8 +51,7 @@
   font-size: 1.1rem;
 }
 .mode .detail .secondaryText {
-  
- font-size: 0.8rem;
+  font-size: 0.8rem;
 }
 
 .mode:hover {
@@ -68,4 +63,40 @@
   background: var(--blue-gradient);
   color: white;
   scale: 0.8;
+}
+
+@media (max-width: 425px) {
+  .c-container {
+    flex-direction: column;
+  }
+
+  .c-right {
+    justify-content: center;
+  }
+
+  .contactModes {
+    width: 100%;
+  }
+
+  .row {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .mode {
+    width: 100%;
+  }
+}
+
+@media (min-width : 768px) {
+  
+  .c-container {
+ 
+    margin-left: 10%;
+   
+  }
+
+  .c-text {
+    max-width: 80%;
+  }
 }
