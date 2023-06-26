@@ -3,6 +3,7 @@ import "./contact.css"
 import {MdCall} from "react-icons/md"
 import {BsFillChatDotsFill} from "react-icons/bs"
 import {HiChatBubbleBottomCenter} from "react-icons/hi2"
+import {motion,easeIn} from "framer-motion"
 
 const Contacts = () => {
   return (
@@ -16,7 +17,11 @@ const Contacts = () => {
 
         <div className="flexColStart contactModes">
           {/* first row */}
-            <div className=" flexStart row">
+            <motion.div className=" flexStart row"
+            initial={{x: "-7rem", opacity: 0}}
+            animate={{x:0, opacity: 1}}
+            transition={{duration: 2, type:easeIn}}
+            >
               <div className="flexColCenter mode">
                 <div className="flexStart">
                   <div className="flexCenter icon">
@@ -43,10 +48,14 @@ const Contacts = () => {
                 </div>
                 <div className="flexCenter button">Chat Us Now</div>
               </div>
-            </div>
+            </motion.div>
             {/* second row */}
             
-            <div className=" flexStart row">
+            <motion.div className=" flexStart row"
+            initial={{x: "7rem", opacity: 0}}
+            animate={{x:0, opacity: 1}}
+            transition={{duration: 2, type:easeIn}}
+            >
               <div className="flexColCenter mode">
                 <div className="flexStart">
                   <div className="flexCenter icon">
@@ -73,14 +82,18 @@ const Contacts = () => {
                 </div>
                 <div className="flexCenter button">Email Us Now</div>
               </div>
-            </div>
+            </motion.div>
         </div>
       </div>
 
       <div className="c-right">
-        <div className="image-container">
+        <motion.div className="image-container"
+          initial={{y: "7rem", opacity: 0}}
+          animate={{y:0, opacity: 1}}
+          transition={{duration: 2, type:easeIn}}
+        >
           <img src="./contact.jpg" alt="" />
-        </div>
+        </motion.div>
       </div>
     </div>
   </section>

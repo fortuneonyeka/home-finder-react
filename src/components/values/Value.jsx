@@ -1,4 +1,6 @@
 import React, {useState} from 'react'
+import {easeIn, motion} from "framer-motion"
+
 import {
   Accordion,
   AccordionItem,
@@ -19,9 +21,12 @@ const [className, setClassName] = useState(null)
       <div className="paddings innerWidth flexCenter v-container">
         {/* left side */}
         <div className="v-left">
-          <div className="image-container">
+          <motion.div className="image-container"
+          initial={{x: "-7rem", opacity: 0}}
+          animate={{x:0, opacity: 1}}
+          transition={{duration: 2, type:easeIn}}>
             <img src="./value.png" alt="" />
-          </div>
+          </motion.div>
         </div>
         {/* right side */}
         <div className="flexColStart v-right">
@@ -42,9 +47,23 @@ const [className, setClassName] = useState(null)
                         {({expanded}) => expanded ? setClassName("expanded") : setClassName("collapsed") }
                         
                       </AccordionItemState>
-                      <div className="flexCenter icon">{data.icon}</div>
-                      <span className="primaryText">{data.heading}</span>
-                      <div className="flexCenter icon"><MdOutlineArrowDropDown size={20}/></div>
+                      <motion.div className="flexCenter icon"
+                      initial={{y: "-7rem", opacity: 0}}
+                      animate={{y:0, opacity: 1}}
+                      transition={{duration: 2,delay: 1, type:easeIn}}
+                      >{data.icon}</motion.div>
+                      <motion.span className="primaryText"
+                        initial={{y: "-7rem", opacity: 0}}
+                        animate={{y:0, opacity: 1}}
+                        transition={{duration: 2, type:easeIn}}
+                      >{data.heading}</motion.span>
+
+                      <motion.div className="flexCenter icon"
+                      initial={{y: "-7rem", opacity: 0}}
+                      animate={{y:0, opacity: 1}}
+                      transition={{duration: 2,delay: 1, type:easeIn}}
+                      ><MdOutlineArrowDropDown size={20}/></motion.div>
+
                     </AccordionItemButton>
                   </AccordionItemHeading>
                   <AccordionItemPanel>
