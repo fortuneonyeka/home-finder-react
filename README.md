@@ -1,16 +1,18 @@
 # React-Redux Blog App with Redux Toolkit
-"This is a redux task manager application"
+"This is a Real estate frontend application built with modern technologies and animations"
 
 
 
 
-![Screenshot](src/Assets/images//index.png)
-![Screenshot](src/Assets/images/form.png)
+![Screenshot](src/Assets/images/Home-Finder.png)
+![Screenshot](src/Assets/images/full-page.png)
+![Screenshot](src/Assets/images/ipad.png)
+![Screenshot](src/Assets/images/mobile.png)
 
 
 ## Built With
 
-- JSX, CSS,JavaScript, React, json Db, Redux, axios;
+- JSX, CSS,JavaScript, React, framer-motion, react-accessible-accordion,react-countup,react-icons,react-outside-click-handler,swiperjs;
 - Visual Studio, Git, & GitHub;
 
 ## Getting Started
@@ -20,17 +22,17 @@ To run this project, you only need a computer with a browser (like Google Chrome
 1. In your terminal, in the folder of your preference, type the following bash command to clone this repository:
 
 ```sh
-git@github.com:fortuneonyeka/redux-blog-app.git
+git@github.com:fortuneonyeka/home-finder-react.git
 ```
 
 2. Now that you have already cloned the repo run the following commands to get the project up and running:
 ```sh
-cd task-manager
+cd home-finder-react
 npm install
 npm start
 ```
 
-1. Next, you can start performing CRUD operations (Create, Read, Update and Delete)tasks on task manager app. All the changes will be automatically updated on your local server on http://localhost:3000/. You can stop your local server at any time hitting `<Ctrl> + C` on your keyboard.
+1.  All the changes will be automatically updated on your local server on http://localhost:3000/. You can stop your local server at any time hitting `<Ctrl> + C` on your keyboard.
 
 ## Author
 
