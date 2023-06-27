@@ -1,4 +1,4 @@
-# React-Redux Blog App with Redux Toolkit
+# Home finder Real estate application.
 "This is a Real estate frontend application built with modern technologies and animations"
 
 
