@@ -5,9 +5,9 @@
 
 
 ![Screenshot](src/assets/images//full-page.png)
-![Screenshot](src/Assets/images//Home-Finder.png)
-![Screenshot](src/Assets/images//ipad.png)
-![Screenshot](src/Assets/images//mobile.png)
+![Screenshot](src/Assets/images/Home-Finder.png)
+![Screenshot](src/Assets/images/ipad.png)
+![Screenshot](src/Assets/images/mobile.png)
 
 
 ## Built With
