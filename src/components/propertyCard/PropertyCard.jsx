@@ -4,12 +4,13 @@ import "./propertyCard.css"
 import {truncate} from "lodash"
 
 const PropertyCard = ({card}) => {
+  console.log(card.currency);
   return (
     <div className="flexColStart r-card">
     <AiFillHeart size={24} color="gold"/>
     <img src={card.image} alt="home" />
     <span className="secondaryText r-price">
-      <span style={{ color: "blue" }}>${card.currency}</span>
+      <span style={{ color: "gold" }}>${card.currency}</span>
       <span>{card.price}</span>
     </span>
     <span className="primaryText">{truncate(card.title, {length: 15})}</span>
