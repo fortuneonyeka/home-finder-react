@@ -5,6 +5,15 @@
   max-width: max-content;
   margin: auto;
   transition: all 300ms ease-in;
+  position: relative;
+  z-index: 0;
+}
+
+.r-card>svg {
+  position: absolute;
+  top: 25px;
+  right: 30px;
+  z-index: 1;
 }
 
 .r-card:hover {
@@ -19,19 +28,20 @@
 }
 
 .r-card > img {
-  width: 100%;
-  max-width: 15rem;
+  width: 15rem;
+  height: 10rem;
+  border-radius: 12px;
 }
 
-.r-card > :nth-child(2) {
+.r-card > :nth-child(3) {
   font-weight: 600;
   font-size: 1.2rem;
 }
 
-.r-card > :nth-child(3) {
+.r-card > :nth-child(4) {
   font-size: 1.5rem;
 }
-.r-card > :nth-child(4) {
+.r-card > :nth-child(5) {
   font-size: 0.7rem;
   width: 15rem;
 }
