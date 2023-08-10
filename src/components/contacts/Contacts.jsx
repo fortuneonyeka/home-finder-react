@@ -80,7 +80,7 @@ const Contacts = () => {
                       <span className="secondaryText">ihedfortune@gmail.com</span>
                   </div>
                 </div>
-                <div className="flexCenter button">Email Us Now</div>
+                <div className="flexCenter button"><a href="mailto:ihedfortune@gmail.com">Email Us Now</a></div>
               </div>
             </motion.div>
         </div>
