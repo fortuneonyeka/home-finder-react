@@ -4,9 +4,10 @@ import { PuffLoader } from "react-spinners";
 import { useQuery } from "react-query";
 import { useLocation } from "react-router-dom";
 import { getProperty } from "../../utils/api";
-import { AiFillHeart} from "react-icons/ai";
-import { FaShower,FaCar, FaBed} from "react-icons/fa";
+import { AiFillHeart } from "react-icons/ai";
+import { FaShower, FaCar, FaBed } from "react-icons/fa";
 import { MdLocationOn } from "react-icons/md";
+import Map from "../../components/map/Map";
 
 const Property = () => {
   const { pathname } = useLocation();
@@ -48,67 +49,61 @@ const Property = () => {
         <div className="like">
           <AiFillHeart size={35} color="gold" />
         </div>
-       
-        <img src={data?.image} alt={data.title}/>
 
+        <img src={data?.image} alt={data.title} />
 
         <div className="flexCenter property-details">
           {/* left side */}
           <div className="flexColStart left">
-
             {/* head */}
             <div className="flexStart head">
-              <span className="primaryText">{data?.title}</span> 
-              <span className="orangeText" style={{fontSize: "1.5rem"}}>
-                <span style={{color:"blue"}}>$ </span>
-              <span>{data?.price}</span>
+              <span className="primaryText">{data?.title}</span>
+              <span className="orangeText" style={{ fontSize: "1.5rem" }}>
+                <span style={{ color: "blue" }}>$ </span>
+                <span>{data?.price}</span>
               </span>
             </div>
 
-
             {/* facilities */}
             <div className="flexStart facilities">
-
               <div className="flexStart facility">
-              <FaBed size={20} color="#1F3E72"/>
-              <span>{data.facilities.bedrooms} Bedroom/s</span>
+                <FaBed size={20} color="#1F3E72" />
+                <span>{data.facilities.bedrooms} Bedroom/s</span>
               </div>
 
               <div className="flexStart facility">
-                <FaShower size={20} color="#1F3E72"/>
+                <FaShower size={20} color="#1F3E72" />
                 <span>{data?.facilities.bathrooms} Bathrooms</span>
               </div>
               <div className="flexStart facility">
-              <FaCar size={20} color="#1F3E72"/>
-              <span>{data?.facilities.parking} Parking lot/s</span>
+                <FaCar size={20} color="#1F3E72" />
+                <span>{data?.facilities.parking} Parking lot/s</span>
               </div>
             </div>
 
-
-
             {/* description */}
             <span className="secondaryText descriptions">
-                {data.description}
+              {data.description}
             </span>
 
-
-            <d className="flexStart secondaryText" style={{gap:"1rem"}}>
-              <MdLocationOn  size={25}/>
-              <span>{data?.address}</span> 
-              <span >{data?.city}</span> 
-              <span >{data?.country}</span> 
+            <d className="flexStart secondaryText" style={{ gap: "1rem" }}>
+              <MdLocationOn size={25} />
+              <span>{data?.address}</span>
+              <span>{data?.city}</span>
+              <span>{data?.country}</span>
             </d>
 
-
             {/* booking button */}
-            <button className="button">
-              Book property inspection
-            </button>
+            <button className="button">Book property inspection</button>
           </div>
 
           {/* right side */}
           <div className=" map">
-           
+            <Map
+              address={data?.address}
+              city={data?.city}
+              country={data?.country}
+            />
           </div>
         </div>
       </div>
