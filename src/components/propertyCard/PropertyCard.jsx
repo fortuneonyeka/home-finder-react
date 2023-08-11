@@ -12,7 +12,7 @@ const PropertyCard = ({card}) => {
     <AiFillHeart size={24} color="gold"/>
     <img src={card.image} alt="home" />
     <span className="secondaryText r-price">
-      <span style={{ color: "gold" }}>${card.currency}</span>
+      <span style={{ color: "gold" }}>$ {card.currency}</span>
       <span>{card.price}</span>
     </span>
     <span className="primaryText">{truncate(card.title, {length: 15})}</span>
