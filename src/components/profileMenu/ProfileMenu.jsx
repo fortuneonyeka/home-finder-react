@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Menu, Button, Avatar, Text } from '@mantine/core';
+import { Menu, Avatar,  } from '@mantine/core';
 
 const ProfileMenu = ({user, logout}) => {
   return (
