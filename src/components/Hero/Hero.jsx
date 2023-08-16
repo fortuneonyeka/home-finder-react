@@ -49,7 +49,7 @@ const Hero = () => {
           animate={{x:0, opacity: 1}}
           transition={{duration: 2, type:easeIn}}
           >
-            <img src="./hero-image.png" alt="hero image" />
+            <img src="./hero-image.png" alt="hero" />
           </motion.div>
         </div>
       </div>
