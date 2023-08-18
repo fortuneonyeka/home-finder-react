@@ -1,4 +1,5 @@
 import React from 'react'
+import {    IconHeart, IconBookmarkFilled, IconLogout } from '@tabler/icons-react';
 
 import { Menu, Avatar,  } from '@mantine/core';
 
@@ -9,12 +10,16 @@ const ProfileMenu = ({user, logout}) => {
         <Avatar src={user?.picture} alt="user image" radius={"xl"}/>
       </Menu.Target>
       <Menu.Dropdown>
-          <Menu.Item>Favorites</Menu.Item>
-          <Menu.Item>Bookings</Menu.Item>
-          <Menu.Item onClick={()=>{
+          <Menu.Item icon={<IconHeart
+    size={14}
+    strokeWidth={2}
+    color={'#FF0000'}
+  />}>Favorites</Menu.Item>
+          <Menu.Item icon={<IconBookmarkFilled size={14} />}>Bookings</Menu.Item>
+          <Menu.Item  onClick={()=>{
             localStorage.clear();
             logout()
-          }}>Logout</Menu.Item>
+          }} icon={<IconLogout size={14}/>}>Logout</Menu.Item>
       </Menu.Dropdown>
     </Menu>
   )

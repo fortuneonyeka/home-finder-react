@@ -13,11 +13,13 @@ import UserDetailsContext from "./context/UserDetailsContext";
 
 function App() {
   const queryClient = new QueryClient();
+
   const [userDetails, setUserDetails] = useState({
     favorites: [],
     bookings: [],
     token: null
   })
+
   return (
     <UserDetailsContext.Provider value={{userDetails, setUserDetails}}>
     <QueryClientProvider client={queryClient}>
