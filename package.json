@@ -12,6 +12,7 @@
     "@tabler/icons-react": "^2.30.0",
     "axios": "^1.4.0",
     "dayjs": "^1.11.9",
+    "dotenv": "^16.3.1",
     "esri-leaflet-geocoder": "^3.1.4",
     "framer-motion": "^10.12.16",
     "leaflet": "^1.9.4",
