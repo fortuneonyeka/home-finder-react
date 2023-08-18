@@ -42,6 +42,7 @@ export const createUser = async(email, token) => {
       headers: {
         Authorization: `Bearer ${token}`
       }
+    
     })
   } catch (error) {
     toast.error("Something went wrong, Please try again")
