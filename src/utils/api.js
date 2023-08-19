@@ -17,7 +17,7 @@ if (response.status === 400 || response.status === 500) {
 return response.data
   } catch (error) {
     toast.error("Something went wrong")
-    throw error
+    throw error 
   }
 }
 
@@ -48,4 +48,26 @@ export const createUser = async(email, token) => {
     toast.error("Something went wrong, Please try again")
     throw error
   }
+}
+
+
+export const bookInspection = async (date, propertyId, email,token) => {
+
+    try {
+      await api.post(`/user/bookInspection/${propertyId}`,
+      {
+        email,
+        id: propertyId,
+        date: dayjs(date).format("DD/MM/YYYY")
+      },
+      {
+       headers: {
+        Authorization: `Bearer ${token}`,
+       } 
+      }
+      )
+    } catch (error) {
+      toast.error("Something went wrong, Please try again")
+      throw error
+    }
 }

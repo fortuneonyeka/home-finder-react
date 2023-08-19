@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import "./Property.css";
 import { PuffLoader } from "react-spinners";
 import { useQuery } from "react-query";
@@ -8,6 +8,11 @@ import { AiFillHeart } from "react-icons/ai";
 import { FaShower, FaCar, FaBed } from "react-icons/fa";
 import { MdLocationOn } from "react-icons/md";
 import Map from "../../components/map/Map";
+import useAuthCheck from "../../hooks/useAuthCheck";
+import { useAuth0 } from "@auth0/auth0-react";
+import BookingModel from "../../components/bookingModel/BookingModel";
+import UserDetailsContext from "../../context/UserDetailsContext";
+import { Button } from "@mantine/core";
 
 const Property = () => {
   const { pathname } = useLocation();
@@ -17,6 +22,14 @@ const Property = () => {
     getProperty(id)
   );
 
+  const [modelOpened, setModelOpened ] = useState(false)
+  const {validateLogin} = useAuthCheck()
+  const {user} = useAuth0()
+
+  const { userDetails: { token, bookings }, setUserDetails} = useContext(UserDetailsContext);
+
+
+ 
   if (isError) {
     return (
       <div className="wrapper">
@@ -85,7 +98,7 @@ const Property = () => {
             <span className="secondaryText descriptions">
               {data.description}
             </span>
-
+ 
             <d className="flexStart secondaryText" style={{ gap: "1rem" }}>
               <MdLocationOn size={25} />
               <span>{data?.address}</span>
@@ -94,7 +107,13 @@ const Property = () => {
             </d>
 
             {/* booking button */}
-            <button className="button">Book property inspection</button>
+            {bookings?.map((booking) => booking.id).includes(id) ? (
+                <Button variant="outline" w={"80%"} color="red"><span>Cancel Inspection</span></Button>
+            ) : (<button onClick={()=> {
+              validateLogin() && setModelOpened(true)
+              }} className="button">Book property inspection</button>)}
+
+            <BookingModel opened={modelOpened} setOpened ={setModelOpened} propertyId={id} email={user?.email}/>
           </div>
 
           {/* right side */}
