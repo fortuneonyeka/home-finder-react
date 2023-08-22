@@ -3,16 +3,18 @@ import "./Property.css";
 import { PuffLoader } from "react-spinners";
 import { useQuery } from "react-query";
 import { useLocation } from "react-router-dom";
-import { getProperty } from "../../utils/api";
+import { getProperty, removeBooking } from "../../utils/api";
 import { AiFillHeart } from "react-icons/ai";
 import { FaShower, FaCar, FaBed } from "react-icons/fa";
 import { MdLocationOn } from "react-icons/md";
+import { useMutation } from "react-query";
 import Map from "../../components/map/Map";
 import useAuthCheck from "../../hooks/useAuthCheck";
 import { useAuth0 } from "@auth0/auth0-react";
 import BookingModel from "../../components/bookingModel/BookingModel";
 import UserDetailsContext from "../../context/UserDetailsContext";
 import { Button } from "@mantine/core";
+import { toast } from "react-toastify";
 
 const Property = () => {
   const { pathname } = useLocation();
@@ -28,6 +30,16 @@ const Property = () => {
 
   const { userDetails: { token, bookings }, setUserDetails} = useContext(UserDetailsContext);
 
+  const {mutate: cancelBooking, isLoading: cancelling} = useMutation({
+    mutationFn: () => removeBooking(id, user?.email, token),
+    onSuccess: ()=> {
+      setUserDetails((prev)=>({
+        ...prev,
+        bookings:prev.bookings.filter((booking) => booking?.id !== id)
+      }))
+      toast.success("Inspection is cancelled!", {position: "bottom-right"});
+    }
+  })
 
  
   if (isError) {
@@ -108,7 +120,10 @@ const Property = () => {
 
             {/* booking button */}
             {bookings?.map((booking) => booking.id).includes(id) ? (
-                <Button variant="outline" w={"80%"} color="red"><span>Cancel Inspection</span></Button>
+              <>
+                <Button onClick={() => cancelBooking()} disabled={cancelling} variant="outline" w={"80%"} color="red"><span>Cancel Inspection</span></Button>
+                <span >Your inspection is booked for <span style={{color:"green"}}>{bookings?.filter((booking) => booking?.id === id)[0].date}</span> </span>
+              </>
             ) : (<button onClick={()=> {
               validateLogin() && setModelOpened(true)
               }} className="button">Book property inspection</button>)}

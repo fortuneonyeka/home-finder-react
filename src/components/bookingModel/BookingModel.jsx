@@ -12,6 +12,7 @@ const BookingModel = ({ opened, setOpened, propertyId, email }) => {
 
   const { userDetails: { token }, setUserDetails} = useContext(UserDetailsContext);
 
+ 
   const handleBookingSuccess = () => {
     toast.success(
       "You have successfully booked your inspection for this property",
