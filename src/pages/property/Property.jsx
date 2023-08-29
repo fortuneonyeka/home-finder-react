@@ -4,7 +4,6 @@ import { PuffLoader } from "react-spinners";
 import { useQuery } from "react-query";
 import { useLocation } from "react-router-dom";
 import { getProperty, removeBooking } from "../../utils/api";
-import { AiFillHeart } from "react-icons/ai";
 import { FaShower, FaCar, FaBed } from "react-icons/fa";
 import { MdLocationOn } from "react-icons/md";
 import { useMutation } from "react-query";
@@ -15,6 +14,7 @@ import BookingModel from "../../components/bookingModel/BookingModel";
 import UserDetailsContext from "../../context/UserDetailsContext";
 import { Button } from "@mantine/core";
 import { toast } from "react-toastify";
+import Heart from "../../components/heart/Heart";
 
 const Property = () => {
   const { pathname } = useLocation();
@@ -72,7 +72,7 @@ const Property = () => {
     <div className="wrapper">
       <div className="paddings flexColStart innerWidth property-container">
         <div className="like">
-          <AiFillHeart size={35} color="gold" />
+          <Heart id={id}/>
         </div>
 
         <img src={data?.image} alt={data.title} />
