@@ -1,5 +1,4 @@
 import React from 'react'
-import {AiFillHeart} from "react-icons/ai"
 import "./propertyCard.css"
 import {truncate} from "lodash"
 import { useNavigate } from "react-router-dom"
@@ -10,7 +9,7 @@ const PropertyCard = ({card}) => {
   const navigate = useNavigate()
   return (
     <div className="flexColStart r-card" onClick={() =>navigate(`../properties/${card.id}`)}>
-    <Heart />
+    <Heart id={card?.id}/>
     <img src={card.image} alt="home" />
     <span className="secondaryText r-price">
       <span style={{ color: "gold" }}>$ {card.currency}</span>
