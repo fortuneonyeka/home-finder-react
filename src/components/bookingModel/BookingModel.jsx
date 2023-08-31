@@ -37,7 +37,7 @@ const BookingModel = ({ opened, setOpened, propertyId, email }) => {
       title="Pick your date for inspection"
       centered
     >
-      <div className="flexColCenter">
+      <div className="flexColCenter" style={{gap:"1rem"}}>
         <DatePicker value={value} onChange={setValue} minDate={new Date()} />
         <Button disabled={!value || isLoading} onClick={() => mutate()}>
           Book Inspection
