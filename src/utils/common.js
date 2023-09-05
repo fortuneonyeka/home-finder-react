@@ -29,3 +29,7 @@ export const updateFavorites = (id, favorites) => {
 export const checkFavorites = (id, favorites) => {
   return favorites?.includes(id) ? "#FF0000" : "#0000FF";
 }
+
+export const validateString = (value) => {
+ return value?.length < 3 || value === null ? "Must have a minimum of 3 characters" : null;
+}
