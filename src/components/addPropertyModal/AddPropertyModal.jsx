@@ -31,7 +31,9 @@ const AddPropertyModal = ({opened, setOpened}) => {
         <Stepper.Step label="Location" description="Address">
           <AddLocation nextStep={nextStep}  propertyDetails={propertyDetails} setPropertyDetails={setPropertyDetails}/>
         </Stepper.Step>
-       
+        <Stepper.Step label="Image" description="Property Image">
+          <UploadImage nextStep={nextStep} prevStep={prevStep}  propertyDetails={propertyDetails} setPropertyDetails={setPropertyDetails}/>
+        </Stepper.Step>
         <Stepper.Step label="Final step" description="Get full access">
           Step 3 content: Get full access
         </Stepper.Step>
