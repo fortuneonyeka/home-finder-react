@@ -156,3 +156,29 @@ export const getAllBookings = async(email, token) => {
     throw error
   }
 }
+
+
+export const createResidency = async (data, token) => {
+  try {
+    const res = await api.post(
+      `property/create`,
+      {
+        data
+      },
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    );
+
+    if (res.status === 400 || res.status === 500) {
+      throw res.data;
+    }
+
+    return res.data; // Return the response data
+  } catch (error) {
+    toast.error("Something went wrong, Please try again");
+    throw error;
+  }
+};
