@@ -6,7 +6,7 @@ import useProperties from "../../hooks/useProperties.jsx"
 import React, { useContext } from 'react'
 import { useMutation } from "react-query";
 import { toast } from "react-toastify";
-import { createResidency } from "../../utils/api";
+import { createProperty, createResidency } from "../../utils/api";
 
 const Facilities = ({propertyDetails, setPropertyDetails, prevStep, setOpened, setActive}) => {
   const form = useForm({
