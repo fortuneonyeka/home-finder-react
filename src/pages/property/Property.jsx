@@ -121,12 +121,12 @@ const Property = () => {
             {/* booking button */}
             {bookings?.map((booking) => booking.id).includes(id) ? (
               <>
-                <Button onClick={() => cancelBooking()} disabled={cancelling} variant="outline" w={"80%"} color="red"><span>Cancel Inspection</span></Button>
+                <Button onClick={() => cancelBooking()} disabled={cancelling} variant="gradient" gradient={{ from: 'orange', to: 'red' }} w={"80%"} ><span>Cancel Inspection</span></Button>
                 <span >Your inspection is booked for <span style={{color:"green"}}>{bookings?.filter((booking) => booking?.id === id)[0].date}</span> </span>
               </>
-            ) : (<button onClick={()=> {
+            ) : (<Button onClick={()=> {
               validateLogin() && setModelOpened(true)
-              }} className="button">Book property inspection</button>)}
+              }} variant="gradient" gradient={{ from: 'indigo', to: 'cyan' }} w={"80%"}>Book property inspection</Button>)}
 
             <BookingModel opened={modelOpened} setOpened ={setModelOpened} propertyId={id} email={user?.email}/>
           </div>
