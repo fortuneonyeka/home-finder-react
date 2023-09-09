@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Victoria Garden City",
+    "price": "200,000",
+    "detail": "Road 5, phase2, victoria garden. lekki lagos Nigeria",
+    "image": "./r1.png",
+    "currency": "$"
+  },
+  {
+    "name": "Banana Island",
+    "price": "500,000",
+    "detail": "Road 5, phase2, victoria garden. Banana Island lagos Nigeria",
+    "image": "./r2.png",
+    "currency":"$"
+  },
+  {
+    "name": "Lekki Phase1",
+    "price": "750,000",
+    "detail": "44 Ridge Avenue Manasquan, New Jersey, 08736 United States",
+    "image": "./r3.png",
+    "currency": "£"
+  },
+  {
+    "name": "Lekki gardens",
+    "price": "100,000",
+    "detail": "Road 5, phase2, victoria garden. lekki lagos Nigeria",
+    "image": "./r1.png",
+    "currency":"€"
+  },
+  {
+    "name": "Lekki Mayfair garden",
+    "price": "100,000",
+    "detail": "Road 5, phase2, victoria garden. lekki lagos Nigeria",
+    "image": "./r2.png",
+    "currency":"£"
+  },
+  {
+    "name": "Banana Island",
+    "price": "300,000",
+    "detail": "Road 5, phase2, victoria garden. Banana Island lagos Nigeria",
+    "image": "./r3.png",
+    "currency": "£"
+  }
+]

@@ -1,0 +1,34 @@
+.f-container {
+  justify-content: space-between;
+  border-top: 5px solid rgba(246, 246, 246, 0.802);
+  border-bottom: 5px solid rgba(246, 246, 246, 0.802);
+}
+
+.f-left {
+  gap: 1rem;
+}
+
+.f-menu {
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  cursor: pointer;
+  /* font-size: 10px; */
+  font-weight: 500;
+ 
+}
+
+@media (max-width: 425px) {
+  .f-menu {
+    font-size: 10px;
+  }
+}
+@media (max-width: 768px) {
+ .f-container {
+  justify-content: center;
+ }
+
+ .f-container>div {
+  align-items: center!important;
+  text-align: center;
+ }
+}
