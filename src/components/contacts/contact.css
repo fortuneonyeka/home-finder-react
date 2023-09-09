@@ -90,7 +90,21 @@
 
 @media (min-width : 768px) {
   
+  
   .c-container {
+ 
+    margin-left: 10%;
+   
+  }
+
+  .c-text {
+    max-width: 80%;
+  }
+}
+@media (min-width : 1440px) {
+
+  
+  .c-wrapper {
  
     margin-left: 10%;
    

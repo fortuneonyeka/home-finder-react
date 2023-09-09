@@ -17,10 +17,9 @@ import accordionData from "../../utils/accordion";
 const Value = () => {
   const cardVariants = {
     offscreen: {
-      // y: 100,
+
     },
     onscreen: {
-     
       y: 40,
 
       transition: {
@@ -32,11 +31,10 @@ const Value = () => {
   };
   const cardVariants2 = {
     offscreen: {
-      x: -10,
-     
+      // x: -10,
     },
     onscreen: {
-      x: 10,
+      // x: 10,
 
       transition: {
         type: easeIn,
@@ -52,11 +50,9 @@ const Value = () => {
   const cardVariants3 = {
     offscreen: {
       x: 5,
-     
     },
     onscreen: {
-     
-      x: -10,
+      // x: -10,
 
       transition: {
         type: easeIn,
@@ -102,15 +98,12 @@ const Value = () => {
       >
         {/* left side */}
         <div className="v-left">
-          <motion.div
+          <div
             className="image-container"
-            whileInView="onscreen"
-            viewport={{ amount: 0.8 }}
-            initial="offscreen"
-            variants={cardVariants2}
+           
           >
             <img src="./value.png" alt="" />
-          </motion.div>
+          </div>
         </div>
         {/* right side */}
         <div className="flexColStart v-right">
@@ -132,51 +125,52 @@ const Value = () => {
                   className={`accordionItem ${className}`}
                   key={i}
                   uuid={i}
-                ><motion.div
-                whileInView="onscreen"
-            viewport={{ amount: 0.8 }}
-            initial="offscreen"
-            variants={cardVariants4}
                 >
-                  <AccordionItemHeading>
-                    <AccordionItemButton className="flexCenter accordionButton">
-                      <AccordionItemState>
-                        {({ expanded }) =>
-                          expanded
-                            ? setClassName("expanded")
-                            : setClassName("collapsed")
-                        }
-                      </AccordionItemState>
-                      <motion.div
-                        className="flexCenter icon"
-                        variants={cardVariants2}
-                        whileInView="onscreen"
-                        viewport={{ amount: 0.8 }}
-                        initial="offscreen"
-                      >
-                        {data.icon}
-                      </motion.div>
-                      <motion.span
-                        className="primaryText"
-                        variants={cardVariants4}
-                        whileInView="onscreen"
-                        viewport={{ amount: 0.8 }}
-                        initial="offscreen"
-                      >
-                        {data.heading}
-                      </motion.span>
+                  <motion.div
+                    whileInView="onscreen"
+                    viewport={{ amount: 0.8 }}
+                    initial="offscreen"
+                    variants={cardVariants4}
+                  >
+                    <AccordionItemHeading>
+                      <AccordionItemButton className="flexCenter accordionButton">
+                        <AccordionItemState>
+                          {({ expanded }) =>
+                            expanded
+                              ? setClassName("expanded")
+                              : setClassName("collapsed")
+                          }
+                        </AccordionItemState>
+                        <motion.div
+                          className="flexCenter icon"
+                          variants={cardVariants2}
+                          whileInView="onscreen"
+                          viewport={{ amount: 0.8 }}
+                          initial="offscreen"
+                        >
+                          {data.icon}
+                        </motion.div>
+                        <motion.span
+                          className="primaryText"
+                          variants={cardVariants4}
+                          whileInView="onscreen"
+                          viewport={{ amount: 0.8 }}
+                          initial="offscreen"
+                        >
+                          {data.heading}
+                        </motion.span>
 
-                      <motion.div
-                        className="flexCenter icon"
-                        variants={cardVariants3}
-                        whileInView="onscreen"
-                        viewport={{ amount: 0.8 }}
-                        initial="offscreen"
-                      >
-                        <MdOutlineArrowDropDown size={20} />
-                      </motion.div>
-                    </AccordionItemButton>
-                  </AccordionItemHeading>
+                        <motion.div
+                          className="flexCenter icon"
+                          variants={cardVariants3}
+                          whileInView="onscreen"
+                          viewport={{ amount: 0.8 }}
+                          initial="offscreen"
+                        >
+                          <MdOutlineArrowDropDown size={20} />
+                        </motion.div>
+                      </AccordionItemButton>
+                    </AccordionItemHeading>
                   </motion.div>
                   <AccordionItemPanel>
                     <p className="secondaryText">{data.detail}</p>

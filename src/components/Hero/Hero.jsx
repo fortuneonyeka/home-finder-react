@@ -61,7 +61,7 @@ const Hero = () => {
           className="flexColStart hero-left"
           initial="offscreen"
           whileInView="onscreen"
-          viewport={{ amount: 1 }}
+          viewport={{once: true, amount: 1 }}
         >
           <div className="hero-title">
             <motion.div className="gold-circle" 

@@ -8,11 +8,11 @@ import { easeIn, motion } from "framer-motion";
 const Contacts = () => {
   const cardVariants = {
     offscreen: {
-      x: 100,
+      // x: 100,
     },
     onscreen: {
-      y: 20,
-      x: 80,
+      y: 40,
+      // x: 80,
 
       transition: {
         type: "spring",
@@ -23,13 +23,13 @@ const Contacts = () => {
   };
   const cardVariants2 = {
     offscreen: {
-      x: 100,
+      // x: 100,
     },
     onscreen: {
-      x: 10,
+      // x: 10,
 
       transition: {
-        type: easeIn,
+        type: "spring",
 
         duration: 2,
       },
@@ -41,10 +41,10 @@ const Contacts = () => {
   };
   const cardVariants3 = {
     offscreen: {
-      x: -100,
+      // x: -100,
     },
     onscreen: {
-      x: 10,
+      // x: 10,
 
       transition: {
         type: easeIn,
