@@ -19,7 +19,7 @@ const Header = () => {
 
   const getMeuStyles = (openMenu) => {
     if (document.documentElement.clientWidth <= 800) {
-      return { right: !openMenu && "-100%" };
+      return { left: !openMenu && "100%" };
     }
   };
 
