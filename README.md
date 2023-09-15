@@ -19,7 +19,7 @@
 
 ## Live Demo (if available)
 
-[Live Demo Link](https://homefinder.pages.dev/) 
+[Live Demo Link](https://home-finder-react.vercel.app/) 
 
 
 ## Getting Started
