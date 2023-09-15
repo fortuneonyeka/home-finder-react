@@ -10,9 +10,11 @@ import dayjs from "dayjs";
 const BookingModel = ({ opened, setOpened, propertyId, email }) => {
   const [value, setValue] = useState(null);
 
-  const { userDetails: { token }, setUserDetails} = useContext(UserDetailsContext);
+  const {
+    userDetails: { token },
+    setUserDetails,
+  } = useContext(UserDetailsContext);
 
- 
   const handleBookingSuccess = () => {
     toast.success(
       "You have successfully booked your inspection for this property",
@@ -20,7 +22,13 @@ const BookingModel = ({ opened, setOpened, propertyId, email }) => {
         position: "bottom-right",
       }
     );
-    setUserDetails((prev) => ({ ...prev, bookings: [...prev.bookings, {id:propertyId,date:dayjs(value).format("DD/MM/YYYY")}] }));
+    setUserDetails((prev) => ({
+      ...prev,
+      bookings: [
+        ...prev.bookings,
+        { id: propertyId, date: dayjs(value).format("DD/MM/YYYY") },
+      ],
+    }));
   };
 
   const { mutate, isLoading } = useMutation({
@@ -37,7 +45,7 @@ const BookingModel = ({ opened, setOpened, propertyId, email }) => {
       title="Pick your date for inspection"
       centered
     >
-      <div className="flexColCenter" style={{gap:"1rem"}}>
+      <div className="flexColCenter" style={{ gap: "1rem" }}>
         <DatePicker value={value} onChange={setValue} minDate={new Date()} />
         <Button disabled={!value || isLoading} onClick={() => mutate()}>
           Book Inspection
