@@ -1,5 +1,5 @@
-import { createContext } from "react";
+import {createContext} from 'react'
 
-const UserDetailsContext = createContext();
+const UserDetailsContext = createContext()
 
 export default UserDetailsContext
