@@ -9,7 +9,7 @@ export const api = axios.create({
 export const createResidency = async (data, token) => {
   try {
     const res = await api.post(
-      `property/create`,
+      `/property/create`,
       {
         data,
       },
